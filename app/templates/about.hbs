@@ -1,0 +1,18 @@
+<h2>I am the About page</h2>
+
+{{#each model as |item index|}}
+  <p>Name is: {{item.name}} has id of {{item.id}} is index of {{index}}</p>
+{{/each}}
+
+<p>The name is: {{name}}</p>
+
+<p>
+  {{input value=secretValue}}
+  <button {{action 'checkSecret'}}>Check Secret</button>
+</p>
+
+{{#if showSecret}}
+  <p>Your Secret is now showing</p>
+{{else}}
+  <p>Nothing to see</p>
+{{/if}}
