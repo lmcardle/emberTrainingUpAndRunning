@@ -1,10 +1,10 @@
 <p>
-  {{input value=secretValue}}
+  {{input value=secretValue id="secret-input"}}
   <button {{action 'checkSecret'}}>Check Secret</button>
 </p>
 
 {{#if showSecret}}
-  <p>Your Secret is now showing</p>
+  <p id="secret-message-shown">Your Secret is now showing</p>
 {{else}}
-  <p>Nothing to see</p>
+  <p id="secret-message">Nothing to see</p>
 {{/if}}
